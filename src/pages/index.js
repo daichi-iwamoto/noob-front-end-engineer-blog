@@ -10,10 +10,35 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
+  // タグ格納用
+  let tags = []
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
+
+      {/* タグ収集 */}
+      {posts.map(({ node }) => {
+        if(node.frontmatter.tag !== null) {
+          node.frontmatter.tag.forEach(val => {
+            tags.push( val )
+          })
+        }
+        tags = Array.from(new Set(tags))
+        return null
+      })}
+
+      <ul>
+      {/* タグ出力 */}
+      {tags.map(val => {
+        return (
+          <li>{val}</li>
+        )
+      })}
+      </ul>
+
+
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -61,9 +86,10 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY/MM/DD")
             title
             description
+            tag
           }
         }
       }

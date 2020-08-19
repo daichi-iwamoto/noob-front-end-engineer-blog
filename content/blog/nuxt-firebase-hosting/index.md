@@ -2,15 +2,21 @@
 title: Nuxt.js製サイトをFirebase HostingにDeployする
 date: "2018-10-14"
 description: JSフレームワークのNuxtで作成したWebアプリ・サイトをFirebase HostingにDeployする手法を紹介します。
+tag:
+    - Nuxt.js
+    - Firebase
 ---
 
 ## 概要
-JSフレームワークのNuxtで作成したWebアプリ・サイトをFirebase HostingにDeployする手法を紹介します。
 
-## Nuxt.js導入
+JS フレームワークの Nuxt で作成した Web アプリ・サイトを Firebase Hosting に Deploy する手法を紹介します。
+
+## Nuxt.js 導入
+
 [公式リファレンス](https://ja.nuxtjs.org/guide/installation/)を参考に行いましょう。
 
 #### プロジェクトの作成
+
 ```bash
 npx create-nuxt-app <project-name>
 ```
@@ -19,16 +25,19 @@ npx create-nuxt-app <project-name>
 それぞれ何を聞かれているかは[公式](https://ja.nuxtjs.org/guide/installation/)の方に記載されています。
 
 #### インストール & 起動
+
 ```bash
 cd <project-name>
 npm install
 npm run dev
 ```
-問題なくローカルで確認できればOK
 
-## Firebaseの導入
+問題なくローカルで確認できれば OK
+
+## Firebase の導入
 
 ### 事前準備
+
 [Firebase](https://firebase.google.com/?hl=ja)のサイトにてログインし、
 『 プロジェクトを追加 』を選び任意の名前でプロジェクトを作成しておく。
 
@@ -38,36 +47,38 @@ npm run dev
 npm install -g firebase-tools
 ```
 
-#### Firebaseにログイン
+#### Firebase にログイン
 
 ```
 firebase login
 ```
 
-Webページを開いて良いか聞かれるので`y`を選択し、web上でログインを行います。
+Web ページを開いて良いか聞かれるので`y`を選択し、web 上でログインを行います。
 
-#### Firebaseの初期設定
+#### Firebase の初期設定
 
 ```
 firebase init
 ```
 
 ① 接続するプロジェクトを聞かれるので、既存のプロジェクトの先ほど作成したプロジェクトを指定しましょう。
-② 公開ルートディレクトリを聞かれるので、Nuxtの仕様に合わせ`dist`と答えましょう。
+② 公開ルートディレクトリを聞かれるので、Nuxt の仕様に合わせ`dist`と答えましょう。
 
 これらも詳細は[公式](https://firebase.google.com/docs/hosting/quickstart?hl=ja)で確認してください。
 
-## Deployを行う
+## Deploy を行う
 
-#### まずdeploy用にdistファイルを作成する
+#### まず deploy 用に dist ファイルを作成する
+
 ```
 npm run build
 npm run generate
 ```
 
-##### deployする！
+##### deploy する！
+
 ```
 firebase deploy
 ```
-deployが完了すると公開URLが表示されるので、そこに飛ぶと公開された実物が見れるはずです！
 
+deploy が完了すると公開 URL が表示されるので、そこに飛ぶと公開された実物が見れるはずです！
