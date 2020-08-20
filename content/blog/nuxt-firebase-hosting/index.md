@@ -3,8 +3,8 @@ title: Nuxt.js製サイトをFirebase HostingにDeployする
 date: "2018-10-14"
 description: JSフレームワークのNuxtで作成したWebアプリ・サイトをFirebase HostingにDeployする手法を紹介します。
 tag:
-    - Nuxt.js
-    - Firebase
+  - Nuxt.js
+  - Firebase
 ---
 
 ## 概要

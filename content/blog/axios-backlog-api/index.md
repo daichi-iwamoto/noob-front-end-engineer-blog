@@ -2,7 +2,7 @@
 title: Axios での Backlog API 使用方法
 date: "2019-10-24"
 description: Nuxt製アプリケーション内のAxiosでBacklog APIを使用する例を紹介します。
-tag: 
+tag:
   - Nuxt.js
   - Axios
 ---

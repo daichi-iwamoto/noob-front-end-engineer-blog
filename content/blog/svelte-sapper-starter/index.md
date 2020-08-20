@@ -3,8 +3,8 @@ title: Svelte・Sapper で Hello Worldを行ってみた
 date: "2020-07-24"
 description: 軽量なJSフレームワーク Svelte を使用してみました。Svelte製フレームワーク Sapper にも記事内で触れています。Vue や React と軽く比較してみての感想等々
 tag:
-    - Svelte
-    - Sapper
+  - Svelte
+  - Sapper
 ---
 
 # SVELTE とは
