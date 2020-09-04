@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
+import styles from "../scss/index.module.scss"
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
@@ -28,7 +30,7 @@ const BlogIndex = ({ data, location }) => {
     // タグの出力処理
     let list = []
     tags.forEach(val => {
-      list.push(<li>{val}</li>)
+      list.push(<li><p>{val}</p></li>)
     })
     
     return list
@@ -39,48 +41,47 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
 
-      <ul>
-        {renderTags()}
-      </ul>
+      <section>
+        <h2>Tags</h2>
+        <ul className={styles.taglist}>
+          {renderTags()}
+        </ul>
+      </section>
 
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
+      <section className={styles.postlist}>
+        <h2>Posts</h2>
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
 
-        let tag_span
-        if (node.frontmatter.tag !== null) {
-          node.frontmatter.tag.forEach(val => {
-            tag_span += "<span>{val}</span>"
-          })
-        }
-
-        if (true) {
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        } else {
-          return null
-        }
-      })}
+          if (true) {
+            return (
+              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <article key={node.fields.slug}>
+                  <header>
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                        {title}
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.description || node.excerpt,
+                      }}
+                      />
+                  </section>
+                </article>
+              </Link>
+            )
+          } else {
+            return null
+          }
+        })}
+      </section>
     </Layout>
   )
 }
