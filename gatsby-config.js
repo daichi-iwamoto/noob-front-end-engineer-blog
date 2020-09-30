@@ -1,15 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Web Front End Blog`,
+    title: `Noob Front End Engineer Blog`,
     author: {
       name: `daichi iwamoto`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: `東京在住 ひよっこフロントエンジニア`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `とこしえのひよっこフロントエンジニアによる技術ブログ  主にフロントエンドまわりの記事を書きます`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
-    social: {
-      twitter: `kylemathews`,
-    },
   },
   plugins: [
     {

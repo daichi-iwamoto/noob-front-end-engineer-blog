@@ -1,12 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-
-import styles from "../scss/index.module.scss"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -38,50 +35,54 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
+      <div className="index">
+        <SEO title="Home" />
 
-      <section>
-        <h2>Tags</h2>
-        <ul className={styles.taglist}>
-          {renderTags()}
-        </ul>
-      </section>
+        <section>
+          <h2>Tags</h2>
+          <ul className="taglist">
+            {renderTags()}
+          </ul>
+        </section>
 
-      <section className={styles.postlist}>
-        <h2>Posts</h2>
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
+        <section className="postlist">
+          <h2>Posts</h2>
 
-          if (true) {
-            return (
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                <article key={node.fields.slug}>
-                  <header>
-                    <h3
-                      style={{
-                        marginBottom: rhythm(1 / 4),
-                      }}
-                    >
-                        {title}
-                    </h3>
-                    <small>{node.frontmatter.date}</small>
-                  </header>
-                  <section>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: node.frontmatter.description || node.excerpt,
-                      }}
-                      />
-                  </section>
-                </article>
-              </Link>
-            )
-          } else {
-            return null
-          }
-        })}
-      </section>
+          <div className="listbox">
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+
+              if (true) {
+                return (
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    <article key={node.fields.slug}>
+                      <header>
+                        <h3
+                          style={{
+                            marginBottom: rhythm(1 / 4),
+                          }}
+                        >
+                            {title}
+                        </h3>
+                        <small>{node.frontmatter.date}</small>
+                      </header>
+                      <section>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: node.frontmatter.description || node.excerpt,
+                          }}
+                          />
+                      </section>
+                    </article>
+                  </Link>
+                )
+              } else {
+                return null
+              }
+            })}
+          </div>
+        </section>
+      </div>
     </Layout>
   )
 }
