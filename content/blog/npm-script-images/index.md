@@ -24,7 +24,7 @@ $\scriptsize{ ベストプラクティスとか書いてるけどもっといい
 | imagemin-svgo        | scg の圧縮をしてくれる                       |
 | onchange             | 変更の監視をしてくれる                       |
 
-```bash
+```bash:title=bash
 # モジュールのインストール
 npm install imagemin imagemin-keep-folder imagemin-gifsicle imagemin-mozjpeg imagemin-pngquant imagemin-svgo onchange -D
 ```
@@ -44,7 +44,7 @@ src
 
 `script`に下記を追加してください
 
-```json
+```json:title=package.json
 "press": "onchange src/img/**/*.{jpg,png,gif,svg} -- node imagemin.js {{changed}}"
 ```
 

@@ -1,13 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
-// 黒
-$black : #2d3436;
+$black: #2d3436;
+$gray: #dfe6e9;
+$pink: #ffa2b7;
 
 html * {
   font-family: 'Courier Prime', monospace;
   font-weight: normal;
   color: $black;
   font-display: swap;
+  box-sizing: border-box;
+
+  header {
+    h1 {
+      padding-bottom: 20px;
+      border-bottom: solid 1px $black;
+    }
+  }
+
+  table {
+    font-size: 0.8rem;
+
+    tr {
+      th, td {
+        padding: 0.5rem;
+        border-bottom: solid 1px $gray;
+        
+        &:first-child {
+          padding: 0.5rem;
+          border-right: 1px solid $gray;
+        }
+  
+      }
+      
+      &:last-child {
+        th, td {
+          border-bottom: none;
+        }
+      }
+  
+      th {
+        background-color: $gray;
+      }
+    }
+  }
+}
+
+code {
+  background-color: $gray;
+  color: $black;
+  padding: 5px 5px 0px;
+  margin: 0 3px;
 }
 
 .index {
@@ -55,13 +98,53 @@ html * {
       align-content: flex-start;
 
       a {
+        position: relative;
+        transition: 0.5s;
         color: $black;
+        box-shadow: 0px 0px $black;
+        border: solid 1px #fff;
+        margin: 1rem 0;
+
         article {
           padding: 10px;
           border-radius: 5px;
 
-          h3 {
-            margin-top: 10px;
+          header {
+            h3 {
+              position: relative;
+              margin-top: 10px;
+              display: inline-block;
+              
+              &::before {
+                transition: 0.4s;
+                content: '';
+                width: 0%;
+                height: 0.8rem;
+                background-color: $pink;
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+              }
+            }
+
+            small {
+              display: block;
+            }
+          }
+        }
+        
+        &:hover {
+          box-shadow: 10px 10px $black;
+          border: solid 1px $black;
+
+          article {
+            h3 {
+              &::before {
+                width: 100%;
+              }
+            }
           }
         }
       }

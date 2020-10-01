@@ -10,40 +10,40 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
 
   // タグリスト出力
-  const renderTags = () => {
+  // const renderTags = () => {
     
-    // タグ一覧取得処理
-    let tag = []
-    posts.map(({ node }) => {
-      if (node.frontmatter.tag !== null) {
-        node.frontmatter.tag.forEach(val => {
-          tag.push(val)
-        })
-      }
-      return tag
-    })
-    const tags = Array.from(new Set(tag))
+  //   // タグ一覧取得処理
+  //   let tag = []
+  //   posts.map(({ node }) => {
+  //     if (node.frontmatter.tag !== null) {
+  //       node.frontmatter.tag.forEach(val => {
+  //         tag.push(val)
+  //       })
+  //     }
+  //     return tag
+  //   })
+  //   const tags = Array.from(new Set(tag))
     
-    // タグの出力処理
-    let list = []
-    tags.forEach(val => {
-      list.push(<li><p>{val}</p></li>)
-    })
+  //   // タグの出力処理
+  //   let list = []
+  //   tags.forEach(val => {
+  //     list.push(<li><p>{val}</p></li>)
+  //   })
     
-    return list
-  }
+  //   return list
+  // }
 
   return (
     <Layout location={location} title={siteTitle}>
       <div className="index">
         <SEO title="Home" />
 
-        <section>
+        {/* <section>
           <h2>Tags</h2>
           <ul className="taglist">
             {renderTags()}
           </ul>
-        </section>
+        </section> */}
 
         <section className="postlist">
           <h2>Posts</h2>
@@ -54,7 +54,7 @@ const BlogIndex = ({ data, location }) => {
 
               if (true) {
                 return (
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  <Link to={node.fields.slug}>
                     <article key={node.fields.slug}>
                       <header>
                         <h3
