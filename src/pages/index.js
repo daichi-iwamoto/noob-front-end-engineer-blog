@@ -54,7 +54,7 @@ const BlogIndex = ({ data, location }) => {
 
               if (true) {
                 return (
-                  <Link to={node.fields.slug}>
+                  <Link to={node.fields.slug} key={node.fields.slug}>
                     <article key={node.fields.slug}>
                       <header>
                         <h3

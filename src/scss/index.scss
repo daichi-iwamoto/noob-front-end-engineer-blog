@@ -16,6 +16,31 @@ html * {
       padding-bottom: 20px;
       border-bottom: solid 1px $black;
     }
+
+    h4 {
+      text-align: right;
+      
+      a {
+        position: relative;
+
+        span {
+          position: absolute;
+          top: center;
+          left: 1.5rem;
+        }
+
+        &:hover {
+          span {
+            left: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    padding-top: 30px;
+    text-align: center;
   }
 
   table {
@@ -49,7 +74,7 @@ html * {
 code {
   background-color: $gray;
   color: $black;
-  padding: 5px 5px 0px;
+  padding: 7px 5px 0px;
   margin: 0 3px;
 }
 
@@ -148,6 +173,32 @@ code {
           }
         }
       }
+    }
+  }
+}
+
+article.post {
+  h2 {
+    border-left: solid 5px $black;
+  }
+}
+
+form {
+  p {
+    label {
+      display: inline-block;
+      min-width: 100px;
+    }
+    input {
+      width: calc(100% - 100px);
+
+    }
+    input[type="textarea"] {
+      min-height: 100px;
+    }
+
+    &.submit {
+      text-align: center;
     }
   }
 }

@@ -66,7 +66,7 @@ const Layout = ({ location, title, children }) => {
             }}
             to={`/contact/`}
           >
-            [ &gt; Contact ]
+            [ <span>&gt;</span>&nbsp; Contact ]
           </Link>
         </h4>
       </header>

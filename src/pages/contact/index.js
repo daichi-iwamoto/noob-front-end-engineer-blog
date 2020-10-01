@@ -14,21 +14,24 @@ const BlogIndex = ({ data, location }) => {
         <section>
           <form name="contact" netlify action="/contact/thanks/">
             <p>
-              <label>
-                Name <input type="text" name="name" />
+              <label htmlFor="name">
+                Name
               </label>
+              <input type="text" name="name" />
             </p>
             <p>
-              <label>
-                Email <input type="email" name="email" />
+              <label htmlFor="email">
+                Email
               </label>
+              <input type="email" name="email" />
             </p>
             <p>
-              <label>
-                Message <input type="textarea" name="message" />
+              <label htmlFor="textarea">
+                Message
               </label>
+              <input type="textarea" name="message" />
             </p>
-            <p>
+            <p className="submit">
               <button type="submit">Send</button>
             </p>
           </form>
