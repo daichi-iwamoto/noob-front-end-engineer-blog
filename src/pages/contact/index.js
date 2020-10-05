@@ -13,6 +13,7 @@ const BlogIndex = ({ data, location }) => {
         <SEO title="Contact" />
         <section>
           <form name="contact" data-netlify="true" action="/contact/thanks/">
+            <input type="hidden" name="form-name" value="contact" />
             <p>
               <label htmlFor="name">
                 Name
@@ -34,7 +35,6 @@ const BlogIndex = ({ data, location }) => {
             <p className="submit">
               <button type="submit">Send</button>
             </p>
-            <input type="hidden" name="form-name" value="contact" />
           </form>
         </section>
       </div>
