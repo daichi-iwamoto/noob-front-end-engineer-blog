@@ -1,5 +1,5 @@
 ---
-title: React での Hello World Examples
+title: React Hello World Examples
 date: "2020-01-03"
 description: Reactの入門として、Reactの基本的な機能群を使用してHello Worldを行ってみました。
 tag:
@@ -8,8 +8,8 @@ tag:
 
 ## 概要
 
-・ノーマル Hello World
-・関数コンポーネント Hello World
+・ノーマル Hello World  
+・関数コンポーネント Hello World  
 ・クラスコンポーネント Hello World
 
 ## 導入
