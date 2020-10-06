@@ -8,30 +8,33 @@ tag:
 
 ## 概要
 
-- React 初心者による Gatsby 入門メモ
+- `React`初心者による`Gatsby`入門メモ
 - 主に[公式サイト](https://www.gatsbyjs.org/)の意訳
-- React の基本構文を最低限理解している方向け
+- `React`の基本構文を最低限理解している方向け
 
-<font color="LightPink">※React 玄人の方は違和感を感じたらバンバン指摘オネシャス</font>
+<small>※ React玄人の方は違和感を感じたらご指摘お願いします！</small>
 
 ## Gatsby とは
 
-- React 製の静的サイトジェネレータ
-- なんか最近 Hot らしい :fire:
+- `React`製の静的サイトジェネレータ
+- なんか最近Hotらしい
 
 ## 導入
 
-```bash:bash
+```bash:title=bash
+# インストール
 npm install -g gatsby-cli
-gatsby new gatsby-site
+
+# プロジェクトの作成
+gatsby new [任意のプロジェクト名]
 ```
 
 ## ディレクトリ構造
 
-Gatsby を導入すると初期構造は下記の様なものになります
-<font color="DarkGray">※ 2020/01/06 時点</font>
+Gatsby を導入すると初期構造は下記の様なものになります。
+<small>※ 2020/01/06 時点</small>
 
-```
+```bash
 |-- /.cache
 |-- /plugins
 |-- /public
@@ -48,33 +51,32 @@ Gatsby を導入すると初期構造は下記の様なものになります
 
 ### /src/
 
-主にここを触ることになります
-コンポーネント等を作成する際はここにフォルダーを作るなりして作成します
+主にここを触ることになります。  
+コンポーネント等を作成する際は、ここにフォルダーを作るなりして作成します。
 
 ### /src/pages/
 
-『/src/pages/』内に作成されたファイル名で、ページが自動的に生成されます
-便利 :sob:
+ここに作成されたファイル名で、ページが自動的に生成されます。
+
+例えば、「/src/pages/test.js」で作成を行うと`localhost`では  
+「<http://localhost:8000/test/>」に表示されます。便利&#x1f633;
 
 ### /static/
 
-画像等をここに設置します
+画像等はここに設置します。
 
 ### /gatsby-config.js
 
-プラグインの設定・メタデータの設定等を行います
-
-### /gatsby-config.js
-
-サイトデータを記載するファイル
-title,description,author ect...プラグインなどのメタデータもここで設定
+サイトデータを記載するファイル。
+プラグインの設定・メタデータの設定等を行います。
+title,description,author ect...プラグインなどのメタデータもここで設定。
 
 ## サイト内リンク
 
-Gatsby でサイト内リンクを設置する場合は`<Link />`を使用します
-`/src/pages/index.js`を見てみると下記のような記述があるかと思います
+`Gatsby`でサイト内リンクを設置する場合は`<Link />`を使用します。
+`/src/pages/index.js`を見てみると下記のような記述があるかと思います。
 
-```react:/src/pages/index.js
+```js:title=/src/pages/index.js
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -89,22 +91,23 @@ const IndexPage = () => (
 )
 ```
 
-`<Link to="/page-2/">Go to page 2</Link>`左記のようにリンク先を指定できます
+`<Link to="/page-2/">Go to page 2</Link>`左記のようにリンク先を指定できます。
 
 ## レイアウトコンポーネント
 
-ページ内リンクの説明で記載した`/src/pages/index.js`を見てみると、
-`<Layout>`というタグがあります
-このように Layout コンポーネントでページ全体をラッピングするのが一般的です
-スタイルや関数を複数ページで共有できるようになっています
+ページ内リンクの説明で記載した`/src/pages/index.js`を見てみると、  
+`<Layout>`というタグがあります。  
 
-デフォルトでは`/src/components/layout.js`に設置してあります
+このように`Layou`コンポーネントでページ全体をラッピングするのが一般的です。  
+スタイルや関数を複数ページで共有できるようになっています。
+
+デフォルトでは`/src/components/layout.js`でLayoutの設定が定義してあります。
 
 ## プログラムを使用してページを作成する
 
-`/gatsby-node.js`を使用します
+`/gatsby-node.js`を使用します。
 
-```react:/gatsby-node.js
+```js:title=/gatsby-node.js
 exports.createPages = ({ actions }) => {
   const { createPage } = actions
   const pageData = [
@@ -128,45 +131,45 @@ exports.createPages = ({ actions }) => {
 }
 ```
 
-`const pageData`にあるデータをもとに`forEach`をかけてページを作成できます
-ブログページなどであれば、ここに文言を記入するだけで簡単にページを作成してくれます
+`const pageData`にあるデータをもとに`forEach`をかけてページを作成できます。
+ブログページなどであれば、ここに文言を記入するだけで簡単にページを作成してくれます。
 
 ## `<Layout>`以外でグローバルに使用する CSS の設定
 
-`gatsby-browser.js`を使用します
+`gatsby-browser.js`を使用します。
 
 ```react:gatsby-browser.js
 import "./src/styles/common.css"
 ```
 
-この 1 行で`/src/styles/common.css`が全ページで適用されるようになります
+この1行で`/src/styles/common.css`が全ページで適用されるようになります。
 
 ## Style 付コンポーネントの作成
 
-JSX で css が記載できるようにする為にはプラグインを追加する必要があります
+`JSX`で`css`が記載できるようにする為にはプラグインを追加する必要があります。
 
 `gatsby-plugin-styled-components`
 `styled-components`
 `babel-plugin-styled-components`
-の 3 つをインストールします
+の3つをインストールします。
 
-```bash:bash
+```bash:title=bash
 npm install --save gatsby-plugin-styled-components styled-components babel-plugin-styled-components
 ```
 
-そして`/gatsby-config.js`にプラグインを追加しましょう
+そして`/gatsby-config.js`にプラグインを追加しましょう。
 
-```react:/gatsby-config.js(略版)
+```js:title=/gatsby-config.js(略版)
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
   ],
 ```
 
-css を記述したいコンポーネントでプラグインをインポートする必要があります
-今回は`/src/pages/index.js`で使用してみます
+`css`を記述したいコンポーネントでプラグインをインポートする必要があります。  
+今回は`/src/pages/index.js`で使用してみます。
 
-```react:src/pages/index.js
+```js:title=src/pages/index.js
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
@@ -198,21 +201,20 @@ const IndexPage = () => (
 export default IndexPage
 ```
 
-`import styled from "styled-components"`でインポートを行い
-`const StyledDiv = styled.div`で style 付の Div 要素を作成します
-それを`<StyledDiv>★ test ★</StyledDiv>`と呼び出すことによって
-style 付の Div 要素が表示されるはずです
-書き方面白い :thinking:
+`import styled from "styled-components"`でインポートを行い、  
+`const StyledDiv = styled.div`でstyle付きのDiv要素を作成します。  
+それを`<StyledDiv>★ test ★</StyledDiv>`と呼び出すことによって  
+要素が表示されるはずです。書き方面白い&#x1f914;
 
 ## Sass & Scss の導入
 
-`node-sass`と`gatsby-plugin-sass`を導入する
+`node-sass`と`gatsby-plugin-sass`を導入する。
 
 ```bash:bash
 npm install --save node-sass gatsby-plugin-sass
 ```
 
-`/gatsby-config.js`にプラグインを追加します
+`/gatsby-config.js`にプラグインを追加します。
 
 ```react:/gatsby-config.js(略版)
   plugins: [
@@ -221,5 +223,5 @@ npm install --save node-sass gatsby-plugin-sass
   ],
 ```
 
-これでファイルを`.sass`や`.scss`として作成すれば、css を import している箇所を
-sass や scss に変更してそのまま使用できます
+これでファイルを`.sass`や`.scss`として作成し、  
+`css`をインポートしている箇所を`sass`や`scss`に変更すれば使用できます。

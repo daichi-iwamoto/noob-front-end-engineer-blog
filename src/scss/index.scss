@@ -196,3 +196,15 @@ form {
     }
   }
 }
+
+article.post {
+  ul {
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  small {
+    font-size: .8rem;
+    color: #5f5f5f;
+  }
+}

@@ -50,6 +50,10 @@ const SEO = ({ description, lang, meta, title }) => {
           property: `og:type`,
           content: `website`,
         },
+        {
+          name: 'google-site-verification',
+          content: 'Googleから発行されたコードをコピー&ペースト',
+        },
       ].concat(meta)}
     />
   )
