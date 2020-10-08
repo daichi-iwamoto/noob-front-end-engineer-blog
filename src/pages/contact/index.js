@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
       <div className="contact">
         <SEO title="Contact" />
         <section>
-          <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact/thanks/">
+          <form method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact/thanks/">
             <input type="hidden" name="form-name" value="contact" />
             <p>
               <label htmlFor="name">
