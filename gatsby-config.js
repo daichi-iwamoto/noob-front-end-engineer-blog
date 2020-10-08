@@ -6,7 +6,7 @@ module.exports = {
       summary: `東京在住 ひよっこフロントエンジニア`,
     },
     description: `とこしえのひよっこフロントエンジニアによる技術ブログ  主にフロントエンドまわりの記事を書きます`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `https://noob-front-end-engineer-blog.com/`,
   },
   plugins: [
     {
