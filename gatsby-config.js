@@ -10,6 +10,9 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-sitemap`
+    },
+    {
       resolve: `gatsby-plugin-sass`
     },
     {
