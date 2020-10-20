@@ -249,3 +249,21 @@ form {
     }
   }
 }
+
+@media screen and (max-width: 850px) {
+  body {
+    nav.table-of-content {
+      position: relative;
+      top: 0;
+      left: 0;
+      line-height: 1.5;
+      font-size: 14px;
+      width: 100%;
+      background: #e4e4e4;
+      padding: 20px 20px 20px 40px;
+      > ul {
+        margin: 0;
+      }
+    }
+  }
+}
