@@ -159,3 +159,37 @@ npm run press
 
 <https://techblog.lclco.com/entry/2018/08/31/180000>  
 <https://qiita.com/k-gen/items/79812b04593b233b1ac1>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "npm-scriptで画像圧縮を自動化する",
+  "headline": "npm-scriptで画像圧縮を自動化する",
+  "author": {
+    "@type": "Person",
+    "name": "Daichi Iwamoto"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "[横幅1200px以上の画像とのこと]",
+    "height": 1234567890,
+    "width": 1200
+  },
+  "description": "npm-scriptを用いて、画像の追加・変更を監視し自動で圧縮してくれるモジュールを作成する方法を紹介します。",
+  "url": "https://noob-front-end-engineer-blog.com/npm-script-images/",
+  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/npm-script-images/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noob Front End Engineer Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://noob-front-end-engineer-blog.com/favicon-32x32.png",
+      "width": 32,
+      "height": 32
+    }
+  },
+  "datePublished": "2020-08-12",
+  "dateModified": "2020-08-12"
+}
+</script>
