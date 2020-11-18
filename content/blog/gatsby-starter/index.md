@@ -1,7 +1,7 @@
 ---
 title: React初心者向け Gatsbyざっくり入門
 date: "2020-01-06"
-description: React初心者によるReact初心者の為のGatsby入門書です。ディレクトリ構造等基本的な内容を紹介します。
+description: React初心者によるReact初心者の為のGatsby入門書です。ディレクトリ構造等の基本的な内容を紹介します。
 tag:
   - Gatsby.js
 ---
@@ -225,3 +225,37 @@ npm install --save node-sass gatsby-plugin-sass
 
 これでファイルを`.sass`や`.scss`として作成し、  
 `css`をインポートしている箇所を`sass`や`scss`に変更すれば使用できます。
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "React初心者向け Gatsbyざっくり入門",
+  "headline": "React初心者向け Gatsbyざっくり入門",
+  "author": {
+    "@type": "Person",
+    "name": "Daichi Iwamoto"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://placehold.jp/1200x600.png",
+    "height": 600,
+    "width": 1200
+  },
+  "description": "React初心者によるReact初心者の為のGatsby入門書です。ディレクトリ構造等の基本的な内容を紹介します。",
+  "url": "https://noob-front-end-engineer-blog.com/gatsby-starter/",
+  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/gatsby-starter/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noob Front End Engineer Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://noob-front-end-engineer-blog.com/favicon-32x32.png",
+      "width": 32,
+      "height": 32
+    }
+  },
+  "datePublished": "2020-08-12",
+  "dateModified": "2020-08-12"
+}
+</script>

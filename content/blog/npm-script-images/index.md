@@ -172,8 +172,8 @@ npm run press
   },
   "image": {
     "@type": "ImageObject",
-    "url": "[横幅1200px以上の画像とのこと]",
-    "height": 1234567890,
+    "url": "https://placehold.jp/1200x600.png",
+    "height": 600,
     "width": 1200
   },
   "description": "npm-scriptを用いて、画像の追加・変更を監視し自動で圧縮してくれるモジュールを作成する方法を紹介します。",
