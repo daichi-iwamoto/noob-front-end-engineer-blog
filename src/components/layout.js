@@ -60,13 +60,9 @@ const Layout = ({ location, title, children }) => {
         {header}
         <h4>
           <Link
-            style={{
-              boxShadow: `none`,
-              color: `inherit`,
-            }}
             to={`/contact/`}
           >
-            [ <span>&gt;</span>&nbsp; Contact ]
+            Contact
           </Link>
         </h4>
       </header>

@@ -2,7 +2,13 @@
 
 $black: #2d3436;
 $gray: #dfe6e9;
+$white: #f5f6fa;
 $pink: #ffa2b7;
+$body: #fff5f5;
+
+body {
+  background-color: $body;
+}
 
 html * {
   font-family: 'Courier Prime', monospace;
@@ -22,17 +28,18 @@ html * {
       
       a {
         position: relative;
-
-        span {
-          position: absolute;
-          top: center;
-          left: 1.5rem;
-        }
+        padding: 15px 30px;
+        background-color: $body;
+        box-sizing: border-box;
+        border-radius: 15px;
+        display: inline-block;
+        box-shadow: 3px 3px 10px #dadada, -3px -3px 10px #ffffff;
+        transition: .3s;
 
         &:hover {
-          span {
-            left: 1.8rem;
-          }
+          box-shadow: 0 0 15px $pink;
+          background-color: $pink;
+          color: $white;
         }
       }
     }
@@ -57,7 +64,15 @@ html * {
     }
     small {
       font-size: .8rem;
-      color: #5f5f5f;
+      color: $black;
+    }
+
+    .description {
+      padding: 15px;
+      background-color: $body;
+      box-sizing: border-box;
+      border-radius: 15px;
+      box-shadow: 5px 5px 15px #cccccc, -5px -5px 15px #ffffff;
     }
   }
 
@@ -132,6 +147,9 @@ code {
 }
 
 .index {
+  margin: 50px 0;
+  padding: 15px 0 0;
+  border-radius: 10px;
 
   .taglist {
     max-width: 100%;
@@ -158,7 +176,7 @@ code {
       p {
         padding: 5px 10px;
         background-color: #ff8ba7;
-        color: #fefefe;
+        color: $black;
         letter-spacing: 1.5px;
         text-align: left;
       }
@@ -182,10 +200,10 @@ code {
         box-shadow: 0px 0px $black;
         border: solid 1px #fff;
         margin: 1rem 0;
+        box-shadow: none;
 
         article {
           padding: 10px;
-          border-radius: 5px;
 
           header {
             h3 {
@@ -203,6 +221,7 @@ code {
                 position: absolute;
                 left: 0;
                 bottom: 0;
+                opacity: .5;
                 z-index: -1;
               }
             }
