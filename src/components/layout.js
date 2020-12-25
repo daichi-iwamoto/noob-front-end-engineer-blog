@@ -6,6 +6,7 @@ import { rhythm, scale } from "../utils/typography"
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
+  let contact
 
   if (location.pathname === rootPath) {
     header = (
@@ -47,6 +48,50 @@ const Layout = ({ location, title, children }) => {
       </h3>
     )
   }
+
+  if (location.pathname === rootPath) {
+    contact = (
+    <div className="profile-box">
+      <div className="profile-img">
+        <img src="/logo.jpg" alt="プロフィール画像"/>
+      </div>
+      <p>
+        とこしえのひよっこフロントエンジニアによる技術ブログ<br />
+        主にフロントエンドまわりの記事を書いてます。
+      </p>
+      <h4>
+        <Link
+          to={`/contact/`}
+        >
+          Contact
+        </Link>
+      </h4>
+    </div>
+    )
+  } else if (location.pathname === '/contact/') {
+    contact = (
+    <div className="profile-box contact">
+      <div className="profile-img">
+        <img src="/logo.jpg" alt="プロフィール画像"/>
+      </div>
+      <p>
+        フロントエンドエンジニアの「だいち」です。<br />
+        記事についての質問や、ご指摘お待ちしてます。
+      </p>
+    </div>
+    )
+  } else {
+    contact = (
+    <h4 className="head-contact">
+      <Link
+        to={`/contact/`}
+      >
+        Contact
+      </Link>
+    </h4>
+    )
+  }
+
   return (
     <div
       style={{
@@ -58,13 +103,7 @@ const Layout = ({ location, title, children }) => {
     >
       <header>
         {header}
-        <h4>
-          <Link
-            to={`/contact/`}
-          >
-            Contact
-          </Link>
-        </h4>
+        {contact}
       </header>
       <main>{children}</main>
       <footer>
