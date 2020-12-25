@@ -86,6 +86,9 @@ html * {
       h4 {
         text-align: right;
         margin: 0;
+        padding: 5px;
+        border-radius: 50px;
+        box-shadow: 3px 3px 5px #dadada, -3px -3px 5px #fff;
 
         a {
           position: relative;
