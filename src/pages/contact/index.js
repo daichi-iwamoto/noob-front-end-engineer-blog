@@ -9,8 +9,9 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <div className="contact">
+      <div id="contact">
         <SEO title="Contact" />
+        <h1>Contact</h1>
         <section>
           <form method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact/thanks/">
             <input type="hidden" name="form-name" value="contact" />
@@ -30,7 +31,7 @@ const BlogIndex = ({ data, location }) => {
               <label htmlFor="textarea">
                 Message
               </label>
-              <input type="textarea" name="message" />
+              <textarea name="message" />
             </p>
             <p className="submit">
               <button type="submit">Send</button>
