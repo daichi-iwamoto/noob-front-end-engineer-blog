@@ -264,6 +264,8 @@ code {
         border: solid 1px $body;
         margin: 1rem 0;
         box-shadow: none;
+        box-shadow: 3px 3px 5px #dadada, -3px -3px 5px #fff;
+        border-radius: 10px;
 
         article {
           padding: 10px;
@@ -386,25 +388,6 @@ form {
       padding: 20px 20px 20px 40px;
       > ul {
         margin: 0;
-      }
-    }
-
-    .index {
-      .postlist {
-        .listbox {
-          a {
-            box-shadow: 10px 10px #2d3436;
-            border: solid 1px #2d3436;
-            
-            article {
-              h3 {
-                &::before {
-                  width: 100%;
-                }
-              }
-            }
-          }
-        }
       }
     }
   }
