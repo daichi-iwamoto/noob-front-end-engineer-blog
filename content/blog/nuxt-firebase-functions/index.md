@@ -2,6 +2,9 @@
 title: Nuxt.jsでFirebase Functionsを使用する
 date: "2019-11-19"
 description: Nuxt.jsのプロジェクトで、Firebase Functionsを使用して「Hello World!」を行います！Nuxtちょっと分かるけど、NuxtとFirebaseの組み合わせ方わからん…！ってなってる人の助けになれば
+tag:
+  - Nuxt.js
+  - Firebase
 ---
 
 ## 概要

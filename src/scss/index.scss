@@ -121,6 +121,25 @@ html * {
       display: none;
     }
 
+    ul.breadcrumb__list {
+      display: flex;
+      list-style: none;
+
+      li.breadcrumb__item {
+        position: relative;
+
+        &:not(:last-child) {
+          padding: 0 30px 0 0;
+
+          &::after {
+            content: '>';
+            position: absolute;
+            right: 9px;
+          }
+        }
+      }
+    }
+
     ul {
       li {
         margin-bottom: 0.5rem;
@@ -137,6 +156,29 @@ html * {
       box-sizing: border-box;
       border-radius: 15px;
       box-shadow: 5px 5px 15px #cccccc, -5px -5px 15px #ffffff;
+    }
+    
+    blockquote.novel {
+      margin: 50px 0;
+      padding: 20px 15px 15px;
+      font-size: 16px;
+      font-weight: normal;
+      border: none;
+      background-color: $gray;
+      box-shadow: 0px 10px 15px rgba(0,0,0,0.25);
+      border-left: solid 5px $black;
+      
+      p {
+        display: inline;
+        border-bottom: dashed 1px;
+      }
+      
+      cite {
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        padding: 10px 0 0;
+      }
     }
   }
 
@@ -214,40 +256,38 @@ code {
   padding: 15px 0 0;
   border-radius: 10px;
 
-  .taglist {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      cursor: pointer;
-      font-size: 14px;
-      width: auto;
-      list-style: none;
-      padding-left: 15px;
-      margin: 5px;
-      border-radius: 2px 5px 5px 2px;
-      background: #ffa2b7;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
-      transition: .3s;
-
-      &:hover {
-        opacity: 0.7;
-      }
-
-      p {
-        padding: 5px 10px;
-        background-color: #ff8ba7;
-        color: $black;
-        letter-spacing: 1.5px;
-        text-align: left;
-      }
-    }
-  }
-
   .postlist {
     display: block;
+
+    .tag-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .tag {
+        list-style: none;
+        margin: 0 10px;
+        outline: none;
+
+        button {
+          border: none;
+          padding: 10px 30px;
+          background-color: $white;
+          box-shadow: 3px 3px 5px #dadada, -3px -3px 5px #ffffff;
+          transition: .3s;
+          border-radius: 30px;
+          outline: none;
+        }
+
+        &.active {
+          button {
+            box-shadow: 0 0 5px $pink;
+            background-color: $pink;
+            color: $white;
+          }
+        }
+      }
+    }
 
     .listbox {
       display: flex;
@@ -255,6 +295,8 @@ code {
       flex-wrap: wrap;
       justify-content: flex-start;
       align-content: flex-start;
+      animation-name: showPost;
+      animation-duration: .3s;
 
       a {
         position: relative;
