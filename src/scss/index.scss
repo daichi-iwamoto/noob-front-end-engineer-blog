@@ -276,6 +276,7 @@ code {
           box-shadow: 3px 3px 5px #dadada, -3px -3px 5px #ffffff;
           transition: .3s;
           border-radius: 30px;
+          cursor: pointer;
           outline: none;
         }
 
@@ -299,6 +300,7 @@ code {
       animation-duration: .3s;
 
       a {
+        width: 100%;
         position: relative;
         transition: 0.5s;
         color: $black;

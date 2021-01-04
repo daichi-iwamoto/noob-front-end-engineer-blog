@@ -38,12 +38,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.date}
           </p>
         </header>
-        <ul class="breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <ul class="breadcrumb__list" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem">
             <Link to={`/`} itemprop="item"><span itemprop="name">HOME</span></Link>
             <meta itemprop="position" content="1" />
           </li>
-          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem">
             <span itemprop="name">{post.frontmatter.title}</span>
             <meta itemprop="position" content="2" />
           </li>
