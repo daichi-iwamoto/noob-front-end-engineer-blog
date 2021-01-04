@@ -4,7 +4,10 @@ $black: #2d3436;
 $gray: #dfe6e9;
 $white: #f5f6fa;
 $pink: #ffa2b7;
-$body: #fff5f5;
+$green: #4b8894;
+$blue: #6a46eb;
+$blue2: #35009E;
+$body: #fffefe;
 
 body {
   background-color: $body;
@@ -18,8 +21,14 @@ html * {
   box-sizing: border-box;
 
   header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
     h1 {
       padding-bottom: 20px;
+      width: 100%;
     }
 
     .head-contact {
@@ -52,6 +61,7 @@ html * {
       box-shadow: 3px 3px 5px #dadada, -3px -3px 5px #ffffff;
       padding: 30px 0;
       border-radius: 10px;
+      width: 100%;
 
       &.contact {
         margin: 0 0 30px;
@@ -80,10 +90,10 @@ html * {
 
       p {
         font-size: 14px;
-        margin: 15px;
+        margin: 0 30px;
       }
 
-      h4 {
+      p.contact-btn {
         text-align: right;
         margin: 0;
         padding: 5px;
@@ -92,13 +102,14 @@ html * {
 
         a {
           position: relative;
-          padding: 15px 20px;
+          padding: 10px 20px;
           background-color: $pink;
           box-sizing: border-box;
           border-radius: 30px;
           display: inline-block;
           color: $white;
           transition: .3s;
+          font-size: 16px;
   
           &:hover {
             box-shadow: 0 0 15px $pink;
@@ -115,7 +126,7 @@ html * {
 
   article.post {
     position: relative;
-    margin: 60px 0;
+    margin: 30px 0;
     
     .anchor.before {
       display: none;
@@ -124,6 +135,9 @@ html * {
     ul.breadcrumb__list {
       display: flex;
       list-style: none;
+      padding: 8px 20px 0;
+      border: double;
+      margin: 0 0 30px;
 
       li.breadcrumb__item {
         position: relative;
@@ -271,20 +285,50 @@ code {
 
         button {
           border: none;
-          padding: 10px 30px;
+          padding: 5px 30px 5px 45px;
           background-color: $white;
           box-shadow: 3px 3px 5px #dadada, -3px -3px 5px #ffffff;
           transition: .3s;
-          border-radius: 30px;
           cursor: pointer;
           outline: none;
+          position: relative;
+
+          &::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            display: block;
+            border-radius: 50%;
+            background-color: $white;
+            position: absolute;
+            left: 10px;
+            top: calc(50% - 7.5px);
+            box-shadow: inset 3px 3px 5px #dadada, inset -3px -3px 5px #ffffff;
+          }
         }
 
         &.active {
           button {
-            box-shadow: 0 0 5px $pink;
-            background-color: $pink;
+            box-shadow: 0 0 5px $green;
+            background-color: $green;
             color: $white;
+
+            &::before {
+              box-shadow: none;
+            }
+
+            &::after {
+              content: '';
+              width: 9px;
+              height: 9px;
+              display: block;
+              border-radius: 50%;
+              background-color: $green;
+              position: absolute;
+              left: 13px;
+              top: calc(50% - 4px);
+              box-shadow: 0 0 5px $green;
+            }
           }
         }
       }
@@ -309,10 +353,9 @@ code {
         margin: 1rem 0;
         box-shadow: none;
         box-shadow: 3px 3px 5px #dadada, -3px -3px 5px #fff;
-        border-radius: 10px;
 
         article {
-          padding: 10px;
+          padding: 10px 15px;
 
           header {
             h3 {
@@ -325,12 +368,12 @@ code {
                 content: '';
                 width: 0%;
                 height: 0.8rem;
-                background-color: $pink;
+                background-color: $green;
                 display: block;
                 position: absolute;
                 left: 0;
                 bottom: 0;
-                opacity: .5;
+                opacity: .3;
                 z-index: -1;
               }
             }

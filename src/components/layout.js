@@ -13,7 +13,6 @@ const Layout = ({ location, title, children }) => {
       <h1
         style={{
           ...scale(1.5),
-          marginBottom: rhythm(1.5),
           marginTop: 0,
         }}
       >
@@ -30,7 +29,7 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <h3
+      <p
         style={{
           fontFamily: `Montserrat, sans-serif`,
           marginTop: 0,
@@ -45,7 +44,7 @@ const Layout = ({ location, title, children }) => {
         >
           {title}
         </Link>
-      </h3>
+      </p>
     )
   }
 
@@ -60,13 +59,13 @@ const Layout = ({ location, title, children }) => {
         主にフロントエンドまわりの記事を書いています。<br />
         読んだ小説の記録もつけ始めました。
       </p>
-      <h4>
+      <p className="contact-btn">
         <Link
           to={`/contact/`}
         >
-          Contact
+          CONTACT
         </Link>
-      </h4>
+      </p>
     </div>
     )
   } else if (location.pathname === '/contact/') {
@@ -83,13 +82,13 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     contact = (
-    <h4 className="head-contact">
+    <p className="head-contact">
       <Link
         to={`/contact/`}
       >
-        Contact
+        CONTACT
       </Link>
-    </h4>
+    </p>
     )
   }
 

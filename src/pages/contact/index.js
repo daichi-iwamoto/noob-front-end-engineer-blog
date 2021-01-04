@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
-const BlogIndex = ({ data, location }) => {
+const ContactPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
@@ -43,29 +43,13 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default ContactPage
 
 export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "YYYY/MM/DD")
-            title
-            description
-            tag
-          }
-        }
       }
     }
   }
