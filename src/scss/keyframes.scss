@@ -3,9 +3,11 @@
     0% {
         left: -22px;
     }
+
     50% {
         left: -18px;
     }
+
     100% {
         left: -22px;
     }
@@ -16,7 +18,61 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
+    }
+}
+
+// shake
+@keyframes shake-crazy {
+    10% {
+        transform: translate(15px, 4px) rotate(2deg);
+        opacity: .3
+    }
+
+    20% {
+        transform: translate(-18px, -15px) rotate(9deg);
+        opacity: .94
+    }
+
+    30% {
+        transform: translate(0px, -1px) rotate(5deg);
+        opacity: .68
+    }
+
+    40% {
+        transform: translate(-8px, 11px) rotate(-2deg);
+        opacity: .68
+    }
+
+    50% {
+        transform: translate(1px, 5px) rotate(-3deg);
+        opacity: .3
+    }
+
+    60% {
+        transform: translate(-7px, -9px) rotate(3deg);
+        opacity: .8
+    }
+
+    70% {
+        transform: translate(-2px, 1px) rotate(5deg);
+        opacity: .66
+    }
+
+    80% {
+        transform: translate(13px, -13px) rotate(-5deg);
+        opacity: .38
+    }
+
+    90% {
+        transform: translate(-2px, -10px) rotate(9deg);
+        opacity: .64
+    }
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0)
     }
 }

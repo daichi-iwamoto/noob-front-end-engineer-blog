@@ -24,6 +24,8 @@ const Layout = ({ location, title, children }) => {
           to={`/`}
         >
           {title}
+          &nbsp;
+          <span className="shake-crazy" role="img">&#x1f92a;</span>
         </Link>
       </h1>
     )
