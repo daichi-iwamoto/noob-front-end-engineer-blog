@@ -1,7 +1,7 @@
 ---
-title: Pythonを使用してWordファイルからHTMLファイルをいい感じに生成する
+title: PythonでWordファイルをHTMLに変換
 date: "2021-01-09"
-description: PythonのモジュールmammothとBeautifulSoupを使用して、いい感じのHTMLを作成する方法を紹介します。
+description: PythonのモジュールmammothとBeautifulSoupを使用して、Wordファイルからいい感じのHTMLを作成する方法を紹介します。
 tag:
   - Docker
   - Python
@@ -93,19 +93,31 @@ for file in files:
 
     # --------------------- class setting start ---------------------
 
-    # パラグラフ
-    source = source.replace('<p>', '<p class="">')
-  
     # 見出し 
+    source = source.replace('<h1>', '<h1 class="">')
     source = source.replace('<h2>', '<h2 class="">')
     source = source.replace('<h3>', '<h3 class="">')
+    source = source.replace('<h4>', '<h4 class="">')
+    source = source.replace('<h5>', '<h5 class="">')
 
-    # 画像
-    source = re.sub('<img src=\"(.*?)\"', '<img src=""', source)
+    # テーブル内のpタグ削除
+    source = re.sub('<th(.*?)<p>(.*?)</p>', '<th\\1\\2', source)
+    source = re.sub('<td(.*?)<p>(.*?)</p>', '<td\\1\\2', source)
+
+    # パラグラフ
+    source = source.replace('<p>', '<p class="">')
+
+    # 画像 (画像は未対応の為、ダミー画像を表示)
+    source = re.sub('<img src=\"(.*?)\"', '<img src="https://placehold.jp/150x150.png"', source)
 
     # リスト
     source =source.replace('<ul>', '<ul class="">')
     source =source.replace('<ol>', '<ol class="">')
+
+    # テーブル
+    source =source.replace('<table>', '<table class="">')
+    source =source.replace('<tr>', '<tr class="">')
+    source =source.replace('<td>', '<td class="">')
 
     # --------------------- class setting end ---------------------
 
@@ -169,19 +181,31 @@ for file in files:
 # --- 略 ---
     # --------------------- class setting start ---------------------
 
-    # パラグラフ
-    source = source.replace('<p>', '<p class="">')
-  
     # 見出し 
+    source = source.replace('<h1>', '<h1 class="">')
     source = source.replace('<h2>', '<h2 class="">')
     source = source.replace('<h3>', '<h3 class="">')
+    source = source.replace('<h4>', '<h4 class="">')
+    source = source.replace('<h5>', '<h5 class="">')
 
-    # 画像
-    source = re.sub('<img src=\"(.*?)\"', '<img src=""', source)
+    # テーブル内のpタグ削除
+    source = re.sub('<th(.*?)<p>(.*?)</p>', '<th\\1\\2', source)
+    source = re.sub('<td(.*?)<p>(.*?)</p>', '<td\\1\\2', source)
+
+    # パラグラフ
+    source = source.replace('<p>', '<p class="">')
+
+    # 画像 (画像は未対応の為、ダミー画像を表示)
+    source = re.sub('<img src=\"(.*?)\"', '<img src="https://placehold.jp/150x150.png"', source)
 
     # リスト
     source =source.replace('<ul>', '<ul class="">')
     source =source.replace('<ol>', '<ol class="">')
+
+    # テーブル
+    source =source.replace('<table>', '<table class="">')
+    source =source.replace('<tr>', '<tr class="">')
+    source =source.replace('<td>', '<td class="">')
 
     # --------------------- class setting end ---------------------
 # --- 略 ---
@@ -238,8 +262,8 @@ HTMLファイルを作成したら完成です🙆‍♂️
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "name": "Pythonを使用してWordファイルからHTMLファイルをいい感じに生成する",
-  "headline": "Pythonを使用してWordファイルからHTMLファイルをいい感じに生成する",
+  "name": "PythonでWordファイルをHTMLに変換",
+  "headline": "PythonでWordファイルをHTMLに変換",
   "author": {
     "@type": "Person",
     "name": "Daichi Iwamoto"
@@ -264,6 +288,6 @@ HTMLファイルを作成したら完成です🙆‍♂️
     }
   },
   "datePublished": "2021-01-09",
-  "dateModified": "2021-01-09"
+  "dateModified": "2021-01-22"
 }
 </script>
