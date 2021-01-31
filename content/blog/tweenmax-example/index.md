@@ -1,7 +1,7 @@
 ---
-title: 初心者向け TweenMaxの使い方・使用例
+title: TweenMaxの使い方・アニメーション実装例
 date: "2018-05-15"
-description: jsのアニメーションフレームワーク TweenMaxを使った簡単なアニメーション例を紹介します
+description: jsのアニメーションフレームワーク、TweenMaxを使った簡単なアニメーション例を紹介します
 tag:
   - animation
 ---
@@ -81,7 +81,7 @@ TweenMax.staggerTo(".obj01t", 0.25, { rotationX: 360 }, 0.02)
 {
   "@context":"http://schema.org",
   "@type":"Article",
-  "headline": "初心者向け TweenMaxの使い方・使用例",
+  "headline": "TweenMaxの使い方・アニメーション実装例",
   "mainEntityOfPage":{
     "@type":"WebPage",
     "@id":"https://noob-front-end-engineer-blog.com/tweenmax-example/"
@@ -102,7 +102,7 @@ TweenMax.staggerTo(".obj01t", 0.25, { rotationX: 360 }, 0.02)
     }
   },
   "datePublished":"2018-05-15",
-  "dateModified":"2020-10-017",
+  "dateModified":"2021-01-31",
   "name":"初心者向け TweenMaxの使い方・使用例",
   "url":"https://noob-front-end-engineer-blog.com/tweenmax-example/",
   "image":"http//exmaple.com/images/img.png",
@@ -118,6 +118,6 @@ TweenMax.staggerTo(".obj01t", 0.25, { rotationX: 360 }, 0.02)
       "email":"tay1fai0y@gmail.com",
       "image":"https://cdn1.www.st-hatena.com/users/ca/cartman0/profile.gif?1428245168"
   },
-  "copyrightYear":"2020"
+  "copyrightYear":"2021"
 }
 </script>
