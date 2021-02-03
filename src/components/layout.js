@@ -59,7 +59,7 @@ const Layout = ({ location, title, children }) => {
       <p>
         とこしえのひよっこフロントエンジニアによる技術ブログ<br />
         主にフロントエンドまわりの記事を書いています。<br />
-        読んだ小説の記録もつけ始めました。
+        趣味や生活での事も、たまに記事にしています。
       </p>
       <p className="contact-btn">
         <Link
@@ -99,7 +99,7 @@ const Layout = ({ location, title, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(28),
+        maxWidth: rhythm(30),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
