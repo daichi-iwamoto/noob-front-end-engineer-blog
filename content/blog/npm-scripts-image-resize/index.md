@@ -232,8 +232,8 @@ node sharp.js wh 1200 500
     "width": 1200
   },
   "description": "nodeでsharpを用いて、画像の一括リサイズを行うモジュールの作成方法を紹介します。",
-  "url": "https://noob-front-end-engineer-blog.com/npm-script-image-resize/",
-  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/npm-script-image-resize/",
+  "url": "https://noob-front-end-engineer-blog.com/npm-scripts-image-resize/",
+  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/npm-scripts-image-resize/",
   "publisher": {
     "@type": "Organization",
     "name": "Noob Front End Engineer Blog",

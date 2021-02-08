@@ -234,8 +234,8 @@ ReactDOM.render(
     "width": 1200
   },
   "description": "Reactの入門として、Reactの基本的な機能群を使用してHello Worldを行ってみました。",
-  "url": "https://noob-front-end-engineer-blog.com/npm-script-images/",
-  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/npm-script-images/",
+  "url": "https://noob-front-end-engineer-blog.com/react-hello-world/",
+  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/react-hello-world/",
   "publisher": {
     "@type": "Organization",
     "name": "Noob Front End Engineer Blog",

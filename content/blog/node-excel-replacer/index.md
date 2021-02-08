@@ -349,8 +349,8 @@ node index.js
     "width": 1200
   },
   "description": "「このExcelのA列のファイルのB列の文字列をC列の文字列にしてクレメンス！ちな、7,000件な！」さすがに手入力はやってられん。という事で、Node.js で自動化してみました。",
-  "url": "https://noob-front-end-engineer-blog.com/npm-script-images/",
-  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/npm-script-images/",
+  "url": "https://noob-front-end-engineer-blog.com/node-excel-replacer/",
+  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/node-excel-replacer/",
   "publisher": {
     "@type": "Organization",
     "name": "Noob Front End Engineer Blog",

@@ -277,8 +277,8 @@ npm run dev
     "width": 1200
   },
   "description": "Nuxt.jsのプロジェクトで、Firebase Functionsを使用して「Hello World!」を行います！Nuxtちょっと分かるけど、NuxtとFirebaseの組み合わせ方わからん…！ってなってる人の助けになれば",
-  "url": "https://noob-front-end-engineer-blog.com/npm-script-images/",
-  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/npm-script-images/",
+  "url": "https://noob-front-end-engineer-blog.com/nuxt-firebase-functions/",
+  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/nuxt-firebase-functions/",
   "publisher": {
     "@type": "Organization",
     "name": "Noob Front End Engineer Blog",

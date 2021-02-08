@@ -1,5 +1,5 @@
 ---
-title: 触って直感で覚える Node.js 入門
+title: 触って直感で覚えるNode.js入門
 date: "2020-01-06"
 description: フロントエンド界隈では必須のスキルとなりつつある「Node.js」の解説を行っていきます。環境構築から簡単なモジュールの使用方法まで紹介します。
 tag:
@@ -89,9 +89,9 @@ npm init
 npm run test
 ```
 
-これが基本的な`npm-script`の実行方法です。
+これが基本的な`npm-scripts`の実行方法です。
 
-`npm-script`を実行する際は`package.json`がある  
+`npm-scripts`を実行する際は`package.json`がある  
 ディレクトリで`npm run [スクリプト名]`で
 実行が可能です!
 
@@ -173,8 +173,8 @@ npm run test
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "name": "触って直感で覚える Node.js 入門",
-  "headline": "触って直感で覚える Node.js 入門",
+  "name": "触って直感で覚えるNode.js入門",
+  "headline": "触って直感で覚えるNode.js入門",
   "author": {
     "@type": "Person",
     "name": "Daichi Iwamoto"

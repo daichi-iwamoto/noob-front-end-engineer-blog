@@ -1,15 +1,15 @@
 ---
-title: npm-scriptで画像圧縮を自動化する
+title: npm-scriptsで画像をWebpに変換する
 date: "2021-02-03"
-description: npm-scriptを用いて、画像の追加・変更を監視し自動で圧縮してくれるモジュールを作成する方法を紹介します。
+description: npm-scriptsを用いて、画像をWebpの形式に変換してくれるモジュールの作成方法を紹介します。
 tag:
   - node
-  - npm-script
+  - npm-scripts
 ---
 
 ## 概要
 
-`npm-script`を用いて、画像の追加・変更を監視し  
+`npm-scripts`を用いて、画像の追加・変更を監視し  
 自動で圧縮してくれるモジュールを作成する方法を紹介します！
 
 完成品は[こちら](https://github.com/daichi-iwamoto/node-img-compressor)です。  
@@ -156,7 +156,7 @@ npm run press
 
 ## おわりに
 
-`npm-script`で画像圧縮を自動化する手法を調べると幾つか記事は見つかったのですが  
+`npm-scripts`で画像圧縮を自動化する手法を調べると幾つか記事は見つかったのですが  
 画像を圧縮したいタイミングでコマンドを打つ手法が一番多く、監視を行って圧縮する手法を書いたものは  
 ありませんでした。
 
@@ -173,8 +173,8 @@ npm run press
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "name": "npm-scriptで画像圧縮を自動化する",
-  "headline": "npm-scriptで画像圧縮を自動化する",
+  "name": "npm-scriptsで画像圧縮を自動化する",
+  "headline": "npm-scriptsで画像圧縮を自動化する",
   "author": {
     "@type": "Person",
     "name": "Daichi Iwamoto"
@@ -185,9 +185,9 @@ npm run press
     "height": 600,
     "width": 1200
   },
-  "description": "npm-scriptを用いて、画像の追加・変更を監視し自動で圧縮してくれるモジュールを作成する方法を紹介します。",
-  "url": "https://noob-front-end-engineer-blog.com/npm-script-images/",
-  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/npm-script-images/",
+  "description": "npm-scriptsを用いて、画像の追加・変更を監視し自動で圧縮してくれるモジュールを作成する方法を紹介します。",
+  "url": "https://noob-front-end-engineer-blog.com/npm-scripts-images/",
+  "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/npm-scripts-images/",
   "publisher": {
     "@type": "Organization",
     "name": "Noob Front End Engineer Blog",
