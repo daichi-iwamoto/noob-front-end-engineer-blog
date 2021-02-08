@@ -1,5 +1,5 @@
 ---
-title: Nuxt.js での MicroCMS 使用方法
+title: Nuxt.jsでのMicroCMS使い方
 date: "2019-10-16"
 description: Nuxt製のアプリケーションでMicroCMSを使用する方法を紹介します。NuxtとAxiosの基本的な使用方法がわかっていれば比較的簡単に実装可能です。
 tag:
@@ -259,3 +259,81 @@ https://ja.nuxtjs.org/api/configuration-css/
 アクセス数の見込みがあるサイトでは、CIツールなどを併用するなどして  
 『MicroCMSに変更がかかったタイミングで、ビルドを行う。』等の
 設定をしないといけないと思われます🤔
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "name": "Nuxt.jsでのMicroCMS使い方",
+    "headline": "Nuxt.jsでのMicroCMS使い方",
+    "author": {
+      "@type": "Person",
+      "name": "Daichi Iwamoto"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://placehold.jp/1200x600.png",
+      "height": 600,
+      "width": 1200
+    },
+    "description": "Nuxt製のアプリケーションでMicroCMSを使用する方法を紹介します。NuxtとAxiosの基本的な使用方法がわかっていれば比較的簡単に実装可能です。",
+    "url": "https://noob-front-end-engineer-blog.com/nuxt-micro-cms/",
+    "mainEntityOfPage": "https://noob-front-end-engineer-blog.com/nuxt-micro-cms/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Noob Front End Engineer Blog",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://noob-front-end-engineer-blog.com/favicon-32x32.png",
+        "width": 32,
+        "height": 32
+      }
+    },
+    "datePublished": "2019-10-16",
+    "dateModified": "2021-02-08"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "HowTo",
+    "name": "Nuxt.jsでのMicroCMS使い方",
+    "description": "Nuxt.jsでのMicroCMS使い方",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "url": "https://noob-front-end-engineer-blog.com/nuxt-micro-cms/",
+        "name": "Nuxtプロジェクトの作成",
+        "itemListElement": [
+          {
+            "@type": "HowToDirection",
+            "text": "まずは土台となる、Nuxtのプロジェクトを作成しましょう！公式の導入手順を参考に、create-nuxt-appを使用してセットアップを行います。"
+          }
+        ]
+      },
+      {
+        "@type": "HowToStep",
+        "url": "https://noob-front-end-engineer-blog.com/nuxt-micro-cms/",
+        "name": "MicroCMSでプロジェクトを作成する",
+        "itemListElement": [
+          {
+            "@type": "HowToDirection",
+            "text": "Nuxtのアプリの土台は作成できたので、次は使用するMicroCMSのプロジェクトを作成していきましょう！公式サイトで新規登録を行いサービスを作成します。"
+          }
+        ]
+      },
+      {
+        "@type": "HowToStep",
+        "url": "https://noob-front-end-engineer-blog.com/nuxt-micro-cms/",
+        "name": "NuxtプロジェクトでMicroCMSのAPIを使用する",
+        "itemListElement": [
+          {
+            "@type": "HowToDirection",
+            "text": "Axiosを使用してMicroCMSからデータを取得、取得したデータの表示領域を作成。"
+          }
+        ]
+      }
+    ],
+    "totalTime": "P2D"
+  }
+]
+</script>
