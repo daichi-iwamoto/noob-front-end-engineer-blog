@@ -1,0 +1,11 @@
+[[redirects]]
+from = "/npm-script-image-resize/*"
+to = "/npm-scripts-image-resize/"
+status = 301
+force = false
+
+[[redirects]]
+from = "/npm-script-images/*"
+to = "/npm-scripts-images/"
+status = 301
+force = false
