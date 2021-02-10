@@ -49,6 +49,17 @@ html {
         font-size: .8rem;
         color: $black;
       }
+
+      blockquote {
+        font-style: normal;
+        font-size: 0.8em;
+        box-sizing: border-box;
+        width: 100%;
+        background: #eaeaea;
+        margin-left: 0;
+        padding: 0.2em 1em;
+        border-left: solid 3px #adadad;
+      }
   
       .description {
         padding: 15px;
@@ -173,6 +184,7 @@ html {
             position: relative;
             text-decoration: none;
             box-shadow: none;
+            color: $black;
   
             &:hover {
               text-decoration: underline;

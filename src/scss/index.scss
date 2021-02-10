@@ -24,6 +24,11 @@ html * {
     box-shadow: none;
     color: #cc99cd;
     text-decoration: none;
+
+    &:hover {
+      color: #e8bde8;
+      text-decoration: underline;
+    }
   }
 
   .shake-crazy {
