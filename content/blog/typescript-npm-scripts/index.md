@@ -48,7 +48,7 @@ console.log(hello(you));
 
 次に、作成した`test.ts`をコンパイルしていきます。下記コマンドを叩いてみましょう。
 
-``bash
+```bash
 tsc test.ts
 ```
 
