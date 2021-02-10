@@ -298,8 +298,9 @@ form {
       text-align: center;
 
       input {
-        border-radius: 5px;
-        border: solid 1px;
+        border-radius: 3px;
+        border: none;
+        box-shadow: inset 1px 1px 3px #dadada, inset -1px -1px 3px #fff;
       }
   
       textarea {
@@ -310,7 +311,6 @@ form {
         border: solid 1px;
         font-size: 14px;
         line-height: 1.3;
-    
       }
     }
 

@@ -6,11 +6,11 @@ html {
       
       h2 {
         padding: 12px 12px 8px;
-        margin-top: 6rem;
+        margin-top: 10rem;
         background-color: #fff5f7;
         box-shadow: 1px 1px 5px #dadada, -1px -1px 3px #fff;
 
-        :first-child {
+        &:first-child {
           margin-top: 0;
         }
       }
