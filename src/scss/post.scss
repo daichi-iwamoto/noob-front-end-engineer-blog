@@ -2,11 +2,10 @@ html {
   body {
     article.post {
       position: relative;
-      margin: 30px 0;
       
       h2 {
         padding: 12px 12px 8px;
-        margin-top: 10rem;
+        margin-top: 7rem;
         background-color: #fff5f7;
         box-shadow: 1px 1px 5px #dadada, -1px -1px 3px #fff;
 
@@ -54,6 +53,10 @@ html {
           }
         }
       }
+
+      ul, ol {
+        margin-left: 2rem;
+      }
   
       ul {
         li {
@@ -67,13 +70,17 @@ html {
 
       blockquote {
         font-style: normal;
-        font-size: 0.8em;
+        font-size: .8em;
         box-sizing: border-box;
         width: 100%;
         background: #eaeaea;
         margin-left: 0;
-        padding: 0.2em 1em;
-        border-left: solid 3px #adadad;
+        padding: 1em;
+        border-left: 5px solid #adadad;
+
+        p {
+          color: #9a9a9a;
+        }
       }
   
       .description {
@@ -236,8 +243,9 @@ html {
         line-height: 1.5;
         font-size: 14px;
         width: 100%;
-        background: #e4e4e4;
+        background: #fff5f7;
         padding: 20px 20px 20px 40px;
+        margin: 0 0 50px;
         > ul {
           margin: 0;
         }
