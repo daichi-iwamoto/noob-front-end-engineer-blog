@@ -164,7 +164,7 @@ tsconfig.jsonを下記の様に記載してください。
 では最後に実際にコンパイルしてみましょう。`tsconfig.json`で指定した通り、  
 `./src/ts/`ディレクトリ内に`index.ts`を作成して、この記事のはじめにテストしてみた下記コードをコピペしてみましょう。
 
-```typescript:title=index.ts
+```js:title=index.ts
 function hello(name: string) {
   return "Hello! " + name + "!";
 }

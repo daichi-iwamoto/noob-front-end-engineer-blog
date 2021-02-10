@@ -20,6 +20,12 @@ html * {
   font-display: swap;
   box-sizing: border-box;
 
+  a {
+    box-shadow: none;
+    color: #cc99cd;
+    text-decoration: none;
+  }
+
   .shake-crazy {
     animation-name: shake-crazy;
     animation-duration: 400ms;
