@@ -1,6 +1,6 @@
 ---
 title: npm-scriptsでSassのコンパイル環境構築
-date: "2020-02-19"
+date: "2021-02-19"
 description: Sassの環境構築でよく使用されるGulpですが、最近ではnpm-scriptsの方が主流になりつつあります。今回はnpm-scriptsでSassの環境構築を行っていきます。また、よく目にするnode-sassではなくDart製のパッケージを使用します。
 tag:
   - Node.js
