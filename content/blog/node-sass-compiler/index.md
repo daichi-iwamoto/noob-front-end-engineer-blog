@@ -1,5 +1,5 @@
 ---
-title: npm-scriptsでSassのコンパイル環境構築
+title: npm-scriptsでDart Sassのコンパイル環境構築
 date: "2021-02-19"
 description: Sassの環境構築でよく使用されるGulpですが、最近ではnpm-scriptsの方が主流になりつつあります。今回はnpm-scriptsでSassの環境構築を行っていきます。また、よく目にするnode-sassではなくDart製のパッケージを使用します。
 tag:
@@ -151,8 +151,8 @@ npm run sass
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "name": "npm-scriptsでSassのコンパイル環境構築",
-  "headline": "npm-scriptsでSassのコンパイル環境構築",
+  "name": "npm-scriptsでDart Sassのコンパイル環境構築",
+  "headline": "npm-scriptsでDart Sassのコンパイル環境構築",
   "author": {
     "@type": "Person",
     "name": "Daichi Iwamoto"
