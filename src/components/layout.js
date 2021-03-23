@@ -3,24 +3,32 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
-import Mainv from "../components/mainv"
-
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  let mainv
   let header
   let contact
 
   if (location.pathname === rootPath) {
-    mainv = (
-      <Mainv />
+    header = (
+      <h1
+        style={{
+          ...scale(1.5),
+          marginTop: 0,
+        }}
+      >
+        <Link
+          style={{
+            boxShadow: `none`,
+            color: `inherit`,
+          }}
+          to={`/`}
+        >
+          {title}
+          &nbsp;
+          <span className="shake-crazy" role="img">&#x1f92a;</span>
+        </Link>
+      </h1>
     )
-  } else {
-    mainv = ""
-  }
-
-  if (location.pathname === rootPath) {
-    header = ""
   } else {
     header = (
       <p
@@ -87,27 +95,24 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div>
-      {mainv}
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(30),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>
-          {header}
-          {contact}
-        </header>
-        <main>{children}</main>
-        <footer>
-          {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+    <div
+      style={{
+        marginLeft: `auto`,
+        marginRight: `auto`,
+        maxWidth: rhythm(30),
+        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+      }}
+    >
+      <header>
+        {header}
+        {contact}
+      </header>
+      <main>{children}</main>
+      <footer>
+        {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
     </div>
   )
 }
