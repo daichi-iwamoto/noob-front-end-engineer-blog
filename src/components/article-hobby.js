@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 
-const Tech = ({ description, lang, meta, title }) => {
+const Hobby = ({ description, lang, meta, title }) => {
   const posts = useStaticQuery(
     graphql`
       query {
@@ -27,11 +27,11 @@ const Tech = ({ description, lang, meta, title }) => {
   )
 
   return (
-    <div id="novel" className="listbox">
+    <div id="hobby" className="listbox">
       {posts.allMarkdownRemark.edges.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
 
-        if (node.frontmatter.tag.includes('novel')) {
+        if (node.frontmatter.tag.includes('hobby')) {
           return (
             <Link to={node.fields.slug} key={node.fields.slug}>
               <article key={node.fields.slug}>
@@ -63,4 +63,4 @@ const Tech = ({ description, lang, meta, title }) => {
   )
 }
 
-export default Tech
+export default Hobby

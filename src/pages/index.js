@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import Tech from "../components/article-tech"
-import Novel from "../components/article-novel"
+import Hobby from "../components/article-hobby"
 
 class BlogIndexs extends React.Component {
   constructor(props) {
@@ -15,8 +15,8 @@ class BlogIndexs extends React.Component {
     }
   }
 
-  showNovel = () => {
-    this.setState({type: 'novel'})
+  showHobby = () => {
+    this.setState({type: 'hobby'})
   }
   showTech = () => {
     this.setState({type: 'tech'})
@@ -25,15 +25,15 @@ class BlogIndexs extends React.Component {
   render() {
     let articles
     let techClass
-    let novelClass
-    if ( this.state.type === 'novel' ) {
-      articles = <Novel />
+    let hobbyClass
+    if ( this.state.type === 'hobby' ) {
+      articles = <Hobby />
       techClass = "tag"
-      novelClass = "tag active"
+      hobbyClass = "tag active"
     } else if ( this.state.type === 'tech' ) {
       articles = <Tech />
       techClass = "tag active"
-      novelClass = "tag"
+      hobbyClass = "tag"
     }
 
     return (
@@ -42,7 +42,7 @@ class BlogIndexs extends React.Component {
 
         <ul className="tag-list">
           <li className={techClass}><button onClick={this.showTech}>Tech</button></li>
-          <li className={novelClass}><button onClick={this.showNovel}>Novel</button></li>
+          <li className={hobbyClass}><button onClick={this.showHobby}>Hobby</button></li>
         </ul>
         
         {articles}

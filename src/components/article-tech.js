@@ -31,7 +31,7 @@ const Tech = ({ description, lang, meta, title }) => {
       {posts.allMarkdownRemark.edges.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
 
-        if (!node.frontmatter.tag.includes('novel')) {
+        if (!node.frontmatter.tag.includes('hobby')) {
           return (
             <Link to={node.fields.slug} key={node.fields.slug}>
               <article key={node.fields.slug}>
