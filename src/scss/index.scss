@@ -11,6 +11,7 @@ $body: #fffefe;
 
 body {
   background-color: $body;
+  will-change: transform;
 }
 
 html * {
