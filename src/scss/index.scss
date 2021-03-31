@@ -332,3 +332,29 @@ form {
     }
   }
 }
+
+.waves {
+  position: absolute;
+  height: auto;
+  z-index: -1;
+}
+
+.wave01 {
+  width: 20%;
+  left: -30px;
+}
+
+.wave02 {
+  width: 40%;
+  right: 0;
+}
+
+.wave03 {
+  width: 25%;
+  left: 0;
+}
+
+.wave04 {
+  width: 25%;
+  right: 0;
+}

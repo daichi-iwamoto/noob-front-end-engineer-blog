@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 
 import Tech from "../components/article-tech"
 import Hobby from "../components/article-hobby"
+import BackgroundWave from "../components/background-wave"
 
 class BlogIndexs extends React.Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class BlogIndexs extends React.Component {
 
     return (
       <section className="postlist">
+        <BackgroundWave />
         <h2>Posts</h2>
 
         <ul className="tag-list">
