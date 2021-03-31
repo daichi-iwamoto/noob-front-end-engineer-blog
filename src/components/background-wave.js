@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 
 const BackgroundWave = () => {
-  const [wave01top, setScroll01] = useState(window.pageYOffset*0.8)
-  const [wave02top, setScroll02] = useState(300 + (window.pageYOffset*0.6))
-  const [wave03top, setScroll03] = useState(500 + (window.pageYOffset*0.3))
-  const [wave04top, setScroll04] = useState(200 + (window.pageYOffset*0.7))
+  const [wave01top, setScroll01] = useState(0)
+  const [wave02top, setScroll02] = useState(300)
+  const [wave03top, setScroll03] = useState(500)
+  const [wave04top, setScroll04] = useState(200)
 
   function scroll() {
     const offsetY = window.pageYOffset
